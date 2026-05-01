@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>توجيه الحجز للامتحان الوطني</title>
+    <title>توجيه مباشر للامتحان الوطني</title>
     <style>
         * {
             box-sizing: border-box;
@@ -46,7 +46,7 @@
         }
         button {
             width: 100%;
-            background-color: #3498db;
+            background-color: #27ae60;
             color: white;
             padding: 14px;
             border: none;
@@ -57,7 +57,7 @@
             transition: background-color 0.3s;
         }
         button:hover {
-            background-color: #2980b9;
+            background-color: #2ecc71;
         }
         .footer {
             margin-top: 20px;
@@ -69,21 +69,21 @@
 <body>
 
     <div class="container">
-        <h2>نظام توجيه الحجز للامتحان الوطني</h2>
+        <h2>بوابة التوجيه للامتحان الوطني</h2>
         
-        <label for="universitySelect">اختر الجامعة للتوجه إلى رابط الحجز:</label>
+        <label for="universitySelect">اختر جامعتك للوصول المباشر:</label>
         <select id="universitySelect">
             <option value="">-- اختر الجامعة المعنية --</option>
-            <option value="https://inpt.rdd.edu.iq/VExamExaminationCenters?id=fc77c58c-06de-6d05-093d-3a11060c67eb">جامعة بغداد</option>
+            <option value="https://example.com/uob">جامعة بغداد</option>
             <option value="https://example.com/uomus">الجامعة المستنصرية</option>
             <option value="https://example.com/uobasrah">جامعة البصرة</option>
             <option value="https://example.com/uomosul">جامعة الموصل</option>
         </select>
         
-        <button onclick="redirectToUniversity()">الذهاب إلى موقع الحجز</button>
+        <button onclick="redirectToUniversity()">الانتقال إلى الاستمارة فوراً</button>
         
         <div class="footer">
-            <p>تم تخصيص هذه الصفحة لتسهيل الوصول المباشر.</p>
+            <p>تم إيقاف عداد الانتظار لتسريع الوصول المباشر.</p>
         </div>
     </div>
 
@@ -91,6 +91,7 @@
         function redirectToUniversity() {
             var selectedUrl = document.getElementById("universitySelect").value;
             if (selectedUrl) {
+                // التوجيه المباشر عند الضغط
                 window.location.href = selectedUrl;
             } else {
                 alert("يرجى اختيار الجامعة أولاً من القائمة.");
