@@ -85,13 +85,10 @@
         
         <h2>بوابة التوجيه للامتحان الوطني</h2>
         
-        <label for="universitySelectUniversity">اختر الجامعة للوصول المباشر:</label>
+        <label for="SelectUniversity">اختر الرابط للوصول المباشر:</label>
         <select id="SelectUniversity">
-            <option value="">-- اختر الجامعة المعنية --</option>
-            <option value="https://inpt.rdd.edu.iq/VExamExaminationCenters?id=fc77c58c-06de-6d05-093d-3a11060c67eb">جامعة بغداد</option>
-            <option value="https://example.com/uomus">الجامعة المستنصرية</option>
-            <option value="https://example.com/uobasrah">جامعة البصرة</option>
-            <option value="https://example.com/uomosul">جامعة الموصل</option>
+            <option value="">-- اختر الرابط المعني --</option>
+            <option value="https://inpt.rdd.edu.iq/VExamExaminationCenters?id=fc77c58c-06de-6d05-093d-3a11060c67eb">مراكز الامتحان الوطني للدراسات العليا</option>
         </select>
         
         <button onclick="redirectToUniversity()">الانتقال إلى الاستمارة فوراً</button>
@@ -111,7 +108,7 @@
             if (selectedUrl) {
                 window.location.href = selectedUrl;
             } else {
-                alert("يرجى اختيار الجامعة أولاً من القائمة.");
+                alert("يرجى اختيار الرابط أولاً من القائمة.");
             }
         }
     </script>
