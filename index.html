@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>توجيه مباشر للامتحان الوطني</title>
+    <title>توجيه مباشر للامتحان الوطني - دراسات عليا</title>
     <style>
         * {
             box-sizing: border-box;
@@ -16,22 +16,22 @@
             text-align: center;
         }
         .container {
-            background-color: #ffffff; 
+            background-color: #ffffff;
             max-width: 500px;
             margin: 0 auto;
             padding: 30px;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
-        h2 {
-            color: #2c3e50;
-            margin-bottom: 25px;
-        }
         .welcome-text {
             font-size: 20px;
             font-weight: bold;
             color: #2980b9;
             margin-bottom: 20px;
+        }
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 25px;
         }
         label {
             display: block;
@@ -65,6 +65,12 @@
         button:hover {
             background-color: #2ecc71;
         }
+        .warning-text {
+            color: #e74c3c;
+            font-size: 13px;
+            margin-top: 15px;
+            line-height: 1.4;
+        }
         .footer {
             margin-top: 20px;
             font-size: 14px;
@@ -75,12 +81,12 @@
 <body>
 
     <div class="container">
-        <div class="welcome-text"> أهلاً بكم في صفحة أبو حسين عراب الدراسات العليا ههههههههههههههههههههههههههههههههههههه</div>
+        <div class="welcome-text">أهلاً بكم في صفحة أبو حسين</div>
         
         <h2>بوابة التوجيه للامتحان الوطني</h2>
         
-        <label for="universitySelect">انت وين تدرس بعد عمك :</label>
-        <select id="universitySelect">
+        <label for="universitySelectUniversity">اختر الجامعة للوصول المباشر:</label>
+        <select id="SelectUniversity">
             <option value="">-- اختر الجامعة المعنية --</option>
             <option value="https://example.com/uob">جامعة بغداد</option>
             <option value="https://example.com/uomus">الجامعة المستنصرية</option>
@@ -90,16 +96,19 @@
         
         <button onclick="redirectToUniversity()">الانتقال إلى الاستمارة فوراً</button>
         
+        <div class="warning-text">
+            * ملاحظة: قد تظهر لك صفحة انتظار لمدة 10 ثوانٍ تابعة لنظام الوزارة قبل التحويل التلقائي.
+        </div>
+        
         <div class="footer">
-            <p>تم إيقاف عداد الانتظار لتسريع الوصول المباشر.</p>
+            <p>تم تخصيص هذه البوابة لتسهيل الوصول المباشر.</p>
         </div>
     </div>
 
     <script>
         function redirectToUniversity() {
-            var selectedUrl = document.getElementById("universitySelect").value;
+            var selectedUrl = document.getElementById("SelectUniversity").value;
             if (selectedUrl) {
-                // التوجيه المباشر عند الضغط
                 window.location.href = selectedUrl;
             } else {
                 alert("يرجى اختيار الجامعة أولاً من القائمة.");
